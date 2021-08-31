@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiekybiniai COVID-19 antikūniai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div id="container" class="container p-5">
+        <div class="row">
+            <div class="col-sm-8 mx-auto">
+                <input class="form-control mb-5" placeholder="FoxusLAB atsakymas" v-model="answer" type="number">
+                <p class="d-flex">Analitė: <span class="bold">IgG anti-S, anti-S1, anti-RBD</span><button @click="copyText($event)" class="btn btn-outline-success">Kopijuoti</button></p>
+                <p class="d-flex">Metodas: <span class="bold">Imunocheminis metodas</span><button @click="copyText($event)" class="btn btn-outline-success">Kopijuoti</button></p>
+                <p class="d-flex">Atsakymas: <span class="answer" :class="{positive: positive}">{{ computedAnswer }} BAU/ml {{ computedPositive}}</span><button @click="copyText($event)" class="btn btn-outline-success">Kopijuoti</button></p>
+                <p class="d-flex">Referentinis dydis: <span class="bold">7.1></span> <button @click="copyText($event)" class="btn btn-outline-success">Kopijuoti</button></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

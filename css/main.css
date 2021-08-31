@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+#container {
+    margin-top: 10em;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.answer {
+    color: white;
+    background: red;
+    padding: 0.2em 0.4em;
+    border-radius: 8px;
+}
+p {
+    font-size: 1.2rem;
+    align-items: center;
+}
+.positive {
+    background: green;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+button {
+    position: relative;
+    margin-left: auto;
+}
+p span {
+    margin-left: 0.5em;
+}
+button.display::after {
+    transition: visibility 0.3s ease-in-out;
+    opacity: 1;
+    color: #198754;
+}
+button::after {
+    content: 'Nukopijuota';
+    position: absolute;
+    right: -100px;
+    opacity: 0;
+}
