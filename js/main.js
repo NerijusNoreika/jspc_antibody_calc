@@ -1,4 +1,7 @@
-let vue = new Vue({
+const productCoeficient  = 0.142,
+      positiveThreshold  = 7.1;
+
+new Vue({
     el: '#container',
     data: {
         answer: null,
@@ -25,14 +28,14 @@ let vue = new Vue({
     computed: {
         computedAnswer: {
             get: function() {
-                return Number.parseFloat(this.answer * 0.142).toFixed(2);
+                return Number.parseFloat(this.answer * productCoeficient).toFixed(2);
             },
             set: function(val) {
                 this.answer = val;
             }
         },
         computedPositive: function() {
-            if (this.computedAnswer > 7.1) {
+            if (this.computedAnswer > positiveThreshold) {
                 this.positive = true;
                 return 'teigiamas (positive)';
             } else {
