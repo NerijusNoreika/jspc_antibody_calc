@@ -5,7 +5,6 @@ new Vue({
     el: '#container',
     data: {
         answer: null,
-        name: 'nerijus',
         positive: false,
     },
     methods: {
